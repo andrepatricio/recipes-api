@@ -1,5 +1,5 @@
 {
-  "name": "recipes-api",
+  "name": "recipies-api",
   "version": "1.0.0",
   "description": "Desafio da delivery much",
   "main": "main.js",
@@ -35,12 +35,17 @@
   },
   "homepage": "https://github.com/andrepatricio/recipes-api#readme",
   "dependencies": {
+    "request": "2.88.0",
+    "request-promise": "4.2.2",
+    "restify": "7.2.1"
+  },
+  "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^10.9.4",
     "@types/restify": "^7.2.4",
     "@types/supertest": "^2.0.5",
+    "@types/request-promise": "4.1.42",
     "jest": "^23.5.0",
-    "restify": "7.2.1",
     "supertest": "^3.1.0",
     "ts-jest": "^23.1.4",
     "typescript": "^3.0.3"
