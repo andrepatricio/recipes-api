@@ -10,7 +10,7 @@ export class Server{
     return new Promise((resolve, reject)=> {
       try{
         this.app =  restify.createServer({
-          name: 'recipes-api',
+          name: 'recipies-api',
           version: '1.0.0'
         })
 

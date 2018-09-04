@@ -1,9 +1,9 @@
 import {Server} from './server/server'
-import {recipesRouter} from './recipes/recipes.router'
+import {recipiesRouter} from './recipies/recipies.router'
 
 const server = new Server();
 
-server.bootstrap([recipesRouter]).then(server=>{
+server.bootstrap([recipiesRouter]).then(server=>{
   console.log('Server is listening on:', server.app.address());
 }).catch(error => {
   console.log('Erro ao iniciar o servidor');
