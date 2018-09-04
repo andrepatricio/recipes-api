@@ -1,0 +1,48 @@
+{
+  "name": "recipes-api",
+  "version": "1.0.0",
+  "description": "Desafio da delivery much",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrepatricio/recipes-api.git"
+  },
+  "author": "André Patricio",
+  "license": "ISC",
+  "jest": {
+    "globals": {
+      "address": "http://localhost:3301"
+    },
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/andrepatricio/recipes-api/issues"
+  },
+  "homepage": "https://github.com/andrepatricio/recipes-api#readme",
+  "dependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.4",
+    "@types/restify": "^7.2.4",
+    "@types/supertest": "^2.0.5",
+    "jest": "^23.5.0",
+    "restify": "7.2.1",
+    "supertest": "^3.1.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.3"
+  }
+}
