@@ -23,4 +23,4 @@
 
 	RUN tsc
 
-	CMD ["node", "dist/main.js"]
+	CMD ["npm", "start"]
