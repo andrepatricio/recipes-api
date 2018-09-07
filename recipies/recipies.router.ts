@@ -13,11 +13,29 @@ class RecipiesRouter extends Router{
     next()
   }
 
-  getRecipies = (req, resp, next)=>{
+  getRecipies = async (req, resp, next)=>{
     services.recipePuppyRequest(req.query.i)
-              .then(result=>{
-                console.log(result)
-                resp.send(200)
+              .then(response=>{
+                let serviceResult = {
+                  keywords: req.query.i.split(','),
+                  recipes: []
+                }
+                let recipes = response.results.map(async (elem)=>{
+                  let recipe = {
+                          title: elem.title,
+                          link: elem.href,
+                          ingredients: elem.ingredients.split(','),
+                          gif: ''
+                        }
+                  await services.giphyRequest(elem.title).then(giphyResult =>{
+                    recipe.gif = giphyResult.data[0].url
+                  });
+                  return recipe
+                })
+                Promise.all(recipes).then(resultWithGifs=>{
+                  serviceResult.recipes = resultWithGifs
+                  resp.json(serviceResult)
+                })
               }).catch(next)
   }
 
