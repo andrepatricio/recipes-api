@@ -14,7 +14,7 @@
   "author": "André Patricio",
   "license": "ISC",
   "jest": {
-    "globals":{
+    "globals": {
       "address": "http://localhost:3031"
     },
     "testEnvironment": "node",
@@ -36,11 +36,9 @@
   },
   "homepage": "https://github.com/andrepatricio/recipes-api#readme",
   "dependencies": {
-    "jest-cli": "23.5.0",
     "request": "2.88.0",
     "request-promise": "4.2.2",
-    "restify": "7.2.1",
-    "ts-node": "7.0.1"
+    "restify": "7.2.1"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
@@ -48,8 +46,11 @@
     "@types/restify": "^7.2.4",
     "@types/supertest": "^2.0.5",
     "@types/request-promise": "4.1.42",
+    "jest": "23.5.0",
+    "jest-cli": "23.5.0",
     "supertest": "^3.1.0",
     "ts-jest": "^23.1.4",
+    "ts-node": "7.0.1",
     "typescript": "^3.0.3"
   }
 }
