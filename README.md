@@ -2,28 +2,23 @@
 
 ### Tecnologias utilizadas
 
- NodeJS versão 8.1.3
- 
- NPM versão 5.0.3
- 
- Typescript 2.9.2
+ * NodeJS versão 8.1.3
+ * NPM versão 5.0.3
+ * Typescript 2.9.2
 
   Após instalar as tecnologias descritas acima e baixar os arquivos desse repositório, rodar os seguintes comandos:
+  1. Para instalar as dependências:
   ```
     npm i
   ```
-  Para instalar as dependências 
-
+  2. Para compilar os arquivos typescript:
   ```
     tsc
   ```
-  Para compilar os arquivos typescript
-
+  3. Para rodar a API:
   ```
     npm start
   ```
-
-  Para rodar a API
 
 ### Rodando via Docker
 
@@ -42,7 +37,14 @@
   O {image_name} deve ser o mesmo escolhido durante o build da imagem.
   O {port} deve ser substituido pela porta em que você deseja rodar a aplicação na sua máquina.
 
+### Testes
+  
   Para testar usar o seguinte comando:
   ```
-    curl -X GET localhost:3030/recipies?i=onion,garlic,tomato
+    curl -X GET localhost:{port}/recipies?i=onion,garlic,tomato
+  ```
+  
+  Para testes automáticos rodar o comando:
+  ```
+    npm test
   ```
