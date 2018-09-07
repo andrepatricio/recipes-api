@@ -36,7 +36,9 @@ class RecipiesRouter extends Router{
                   serviceResult.recipes = resultWithGifs
                   resp.json(serviceResult)
                 })
-              }).catch(next)
+              }).catch(err=>{
+                resp.send(500, {mensage: "Estamos com um problema para conectar a um serviço externo"})
+              })
   }
 
   applyRouter(application: restify.Server){
