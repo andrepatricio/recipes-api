@@ -1,4 +1,4 @@
-import {Server} from './server/Server'
+import {Server} from './server/server'
 import {environment} from './commons/environment'
 import {recipiesRouter} from './recipies/recipies.router'
 import * as jestCli from 'jest-cli'
