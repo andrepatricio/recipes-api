@@ -33,4 +33,8 @@ export class Server{
   bootstrap(routers :Router[]): Promise<Server>{
     return this.initRoutes(routers).then(() => this)
   }
+
+  shutdown(){
+    return this.app.close();
+  }
 }

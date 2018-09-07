@@ -1,10 +1,11 @@
 import 'jest'
 import * as request from 'supertest'
 
+let address: string = (<any>global).address
 
 test('GET /recipies with three parameters', ()=>{
   const keywords = ['tomato','onion','garlic']
-  return request('localhost:3030')
+  return request(address)
     .get(`/recipies?i=${keywords.join()}`)
     .then(response=>{
       expect(response.status).toBe(200)
@@ -16,7 +17,7 @@ test('GET /recipies with three parameters', ()=>{
 })
 
 test('GET /recipies with more than three parameters', ()=>{
-  return request('localhost:3030')
+  return request(address)
     .get('/recipies?i=tomato,onion,garlic,potato')
     .then(response=>{
       expect(response.status).toBe(400)
