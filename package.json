@@ -4,6 +4,7 @@
   "description": "Desafio da delivery much",
   "main": "main.js",
   "scripts": {
+    "start": "node dist/main.js",
     "test": "jest"
   },
   "repository": {
@@ -13,9 +14,6 @@
   "author": "André Patricio",
   "license": "ISC",
   "jest": {
-    "globals": {
-      "address": "http://localhost:3301"
-    },
     "testEnvironment": "node",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
