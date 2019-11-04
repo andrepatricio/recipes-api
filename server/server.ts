@@ -1,7 +1,7 @@
 import * as restify from 'restify'
 import {environment} from '../commons/environment'
 import {Router} from '../commons/router'
-
+//teste do narigudo
 export class Server{
 
   app:restify.Server;
